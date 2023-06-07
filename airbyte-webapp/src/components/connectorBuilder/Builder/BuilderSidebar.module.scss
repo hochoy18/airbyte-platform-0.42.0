@@ -1,0 +1,97 @@
+@use "scss/variables";
+@use "scss/colors";
+@use "scss/mixins";
+
+.container {
+  padding: variables.$spacing-lg;
+  position: relative;
+}
+
+.connectorImg {
+  @include mixins.shadow;
+
+  width: 90px;
+  border-radius: variables.$border-radius-2xl;
+  padding: variables.$spacing-xl;
+}
+
+.connectorName {
+  overflow-x: auto;
+  text-align: center;
+}
+
+.streamsHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 variables.$spacing-sm 0 variables.$spacing-md;
+}
+
+.streamsHeading {
+  color: colors.$blue;
+  flex-grow: 1;
+  position: static;
+}
+
+.downloadButton {
+  width: 100%;
+}
+
+.resetButton {
+  margin-top: variables.$spacing-sm;
+}
+
+.viewButton {
+  border: none;
+  width: 100%;
+  height: 34px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: variables.$border-radius-md;
+  padding: variables.$spacing-md;
+  display: flex;
+  align-items: center;
+  gap: variables.$spacing-sm;
+  overflow: hidden;
+}
+
+.unselectedViewButton {
+  background-color: transparent;
+  color: colors.$dark-blue;
+
+  &:hover {
+    background-color: colors.$grey-50;
+  }
+}
+
+.selectedViewButton {
+  background-color: colors.$blue-50;
+  color: colors.$blue;
+}
+
+.streamList {
+  flex-grow: 1;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.viewLabel {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  gap: variables.$spacing-sm;
+  align-items: center;
+}
+
+.errorIndicator {
+  flex: 0 0 auto;
+  margin-right: variables.$spacing-xs;
+}
+
+.streamViewText {
+  color: inherit;
+}
+
+.emptyStreamViewText {
+  color: colors.$grey-300;
+}
